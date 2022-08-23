@@ -1,3 +1,4 @@
+from urllib import response
 from flask import Flask
 from flask_cors import CORS
 from flask_httpauth import HTTPBasicAuth
@@ -6,6 +7,7 @@ from bin.modules.partners import PartnerHandler
 from bin.modules.simanneal import SimannealHandler
 from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv
+import bin.helpers.responses.data as data_response
 import os
 
 load_dotenv('.env')
@@ -35,6 +37,14 @@ simanneal_handler = SimannealHandler(mysql)
 
 #init main
 main = app
+
+#init route
+@main.route('/')
+def init():
+    return data_response.data({
+        'status': True,
+        'message': 'Service Running Properly'
+    })
 
 # partners route
 @main.route('/api/v1/partner/get-all-partner')
