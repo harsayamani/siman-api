@@ -1,0 +1,34 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+aniso8601 = "*"
+click = "*"
+flask = "*"
+flask-restful = "*"
+flask-sqlalchemy = "*"
+itsdangerous = "*"
+jinja2 = "*"
+markupsafe = "*"
+pytz = "*"
+six = "*"
+sqlalchemy = "*"
+werkzeug = "*"
+flask-pymongo = "*"
+flask-mysqldb = "*"
+dnspython = "*"
+seaborn = "*"
+gunicorn = "*"
+python-dotenv = "*"
+pusher = "*"
+flask-cors = "*"
+flask-httpauth = "*"
+simanneal = "*"
+googlemaps = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
