@@ -41,10 +41,7 @@ main = app
 #init route
 @main.route('/')
 def init():
-    return data_response.data({
-        'status': True,
-        'message': 'Service Running Properly'
-    })
+    return data_response.data({}, 'Service Running Properly')
 
 # partners route
 @main.route('/api/v1/partner/get-all-partner')
